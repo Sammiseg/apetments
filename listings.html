@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Apetnments | Listings</title>
+
+        <!-- Bootstrap CSS (CDN) -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+
+        <!-- Your CSS -->
+        <link rel="stylesheet" href="assets/css/styles.css"/>
+    </head>
+    <body>
+
+        <!-- Simple Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Apetnments</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#nav"
+                    aria-controls="nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="listings.html">Listings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container my-4">
+            <div class="row g-4">
+                <!-- Filters (placeholder for later) -->
+                <aside class="col-12 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="h5 mb-3">Filters</h2>
+                            <form id="filtersForm" class="vstack gap-3">
+
+                                <div>
+                                    <label class="form-label fw-semibold">Property type</label>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            value="apartment"
+                                            id="typeApartment"
+                                            name="type">
+                                        <label class="form-check-label" for="typeApartment">Apartment</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            value="house"
+                                            id="typeHouse"
+                                            name="type">
+                                        <label class="form-check-label" for="typeHouse">House</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            value="townhome"
+                                            id="typeTownhome"
+                                            name="type">
+                                        <label class="form-check-label" for="typeTownhome">Townhome</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            value="vacation"
+                                            id="typeVacation"
+                                            name="type">
+                                        <label class="form-check-label" for="typeVacation">Vacation</label>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1">
+
+                                <div>
+                                    <label class="form-label fw-semibold">Pets</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="petsDogs">
+                                        <label class="form-check-label" for="petsDogs">Dogs allowed</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="petsCats">
+                                        <label class="form-check-label" for="petsCats">Cats allowed</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="petsExotics">
+                                        <label class="form-check-label" for="petsExotics">Exotics allowed</label>
+                                        <div class="ms-3 mt-2 d-none" id="exoticsTypesBox">
+                                            <div class="form-text mb-1">Which exotics?</div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="birds" id="exBirds">
+                                                <label class="form-check-label" for="exBirds">Birds</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="ferrets" id="exFerrets">
+                                                <label class="form-check-label" for="exFerrets">Ferrets</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="rabbits" id="exRabbits">
+                                                <label class="form-check-label" for="exRabbits">Rabbits</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    type="checkbox"
+                                                    value="reptiles"
+                                                    id="exReptiles">
+                                                <label class="form-check-label" for="exReptiles">Reptiles</label>
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="insects" id="exInsects">
+                                                <label class="form-check-label" for="exInsects">Insects</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="petsBarn">
+                                        <label class="form-check-label" for="petsBarn">Barn animals allowed</label>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1">
+
+                                <div>
+                                    <label class="form-label fw-semibold">Dog size</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="small" id="dogSmall">
+                                        <label class="form-check-label" for="dogSmall">Small</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="medium" id="dogMedium">
+                                        <label class="form-check-label" for="dogMedium">Medium</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="large" id="dogLarge">
+                                        <label class="form-check-label" for="dogLarge">Large</label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="dogWeight" class="form-label fw-semibold">Dog weight (lbs)</label>
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="dogWeight"
+                                        min="1"
+                                        placeholder="e.g., 45">
+                                    <div class="form-text">Shows listings where max weight is at least this value (or no limit).</div>
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-primary" id="applyFiltersBtn">Apply filters</button>
+                                    <button type="button" class="btn btn-outline-secondary" id="clearFiltersBtn">Clear</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Results -->
+                <section class="col-12 col-lg-9">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h1 class="h4 mb-0">Pet-Friendly Listings</h1>
+                        <div class="text-muted" id="resultsCount">Loading…</div>
+                    </div>
+
+                    <!-- Error message area -->
+                    <div class="alert alert-danger d-none" id="errorBox"></div>
+
+                    <!-- Cards go here -->
+                    <div class="row g-3" id="listingsGrid"></div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Bootstrap JS (CDN) -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Your JS -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
